@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+
+            /* (.) = class in styles.css - letter is the class name */
+            .letter {
+                margin: 0 auto;
+                width: 400px;
+                border: black 1px solid;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='letterDiv'></div>
+    </body>
+    <script>
+        var bankName = 'CashMoney Bank'
+        let letterText = ''
+
+        const customers = [ 
+            { fname: 'Brianna', balance: -54.99, rate: 2.7 },
+            { fname: 'Dillon', balance: 1014.94, rate: 5.1 },
+            { fname: 'Dmitri', balance: 0, rate: 7.2 },
+            { fname: 'Hazel', balance: 0, rate: 7.2 },
+            { fname: 'Isaiah', balance: 224.99, rate: 5.1 },
+            { fname: 'Laura', balance: -213.40, rate: 2.5 },
+            { fname: 'Matias', balance: -12.06, rate: 3.1 },
+            { fname: 'Monique', balance: 2220.54, rate: 7.2 },
+            { fname: 'Petra', balance: 500.35, rate: 4.9 },
+            { fname: 'Reggie', balance: 0, rate: 7.2 }
+        ]
+            //selecting the (#) id above in the div
+        var aDiv = document.querySelector('#letterDiv');
+
+        for (x = 0; x < customers.length; x++){
+            var msgContent = document.createElement("div"); 
+            msgContent.setAttribute("class", "letter"); //this is the styles info .class (.letter)
+
+             if(customers[x].balance < 0){
+               messageOnLetter = `Hello ${customers[x].fname}, My name is John Doe and I'm the president of Customer Services from ${bankName}. Because you are such a valuable customer, we're happy to inform you, we will be lowering your interest rate to ${customers[x].rate}%. We like to thank you for your business and we look forward for a great future.`;
+            }
+            
+                else if(customers[x].balance == 0)
+                {
+               messageOnLetter = `Hello ${customers[x].fname}, My name is John Doe and I'm the president of Customer Services from ${bankName}. Your current balance is up-to-date and there is no need for any action until next month. If there should be any questions please do not hesitate on contacting our offices any time during our business hours. `;
+                }
+                
+                else if (customers[x].balance > 0)
+                {
+                messageOnLetter = `Hello ${customers[x].fname}, My name is John Doe and I'm the president of Customer Services from ${bankName}. The reason I'm reaching out to you, it's because our records show your account is past due by the amount of ${customers[x].balance}. This letter is  an attempt to collect a debt owed to ${bankName}. To avoid any interupptions, please contact our office as soon as possible. Thank you, ${customers[x].fname}.  `;
+                }
+
+                msgContent.textContent = messageOnLetter;
+                aDiv.append(msgContent);
+        }
+   
+
+        // Create a loop that iterates through the customers array. Based on the customer's balance, create a personalized copy 
+        // of the appropriate letter text from below. Each letter should be contained within a div with the style of 'letter'.   
+      
+        // Display all these letters in the letterDiv element.
+
+    </script>
+</html>
