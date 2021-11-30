@@ -1,0 +1,38 @@
+<!-- Modify this page to use a select and an input to generate a calendar for any month and year -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Calendar</title>
+        <link rel='stylesheet' href='calendar.css'>
+    </head>
+    <body>
+   <div class='calendarWrapper'>
+            <div class= "calendarTitle">
+               <span>Rafael Fernandez Calendar FSW-113</span>
+            </div>
+
+            <div class='calendarTitle'>
+                <select name="month" id="whichMonth"></select>
+                <input type= "number" id= "whichYear">
+                <button id= "Search">Search</button>
+            </div>
+
+                <div class="days" >
+                 <label for="sunday"  id="sunday" >Sunday</label>    
+                 <label for="monday" id="monday">Monday</label>  
+                  <label for="tuesday" id="tuesday">Tuesday</label>  
+                   <label for="wednesday" id="wednesday">Wednesday</label> 
+                    <label for="thursday" id="thursday">Thursday</label>    
+                     <label for="friday" id="friday">Friday</label>    
+                      <label for="saturday" id="saturday">Saturday</label>                    
+                </div>
+
+
+
+
+            <div class='calendar' id='calendarDays'></div>
+        </div>
+    </body>
+    <script src='./calendar.js'></script>
+</html>

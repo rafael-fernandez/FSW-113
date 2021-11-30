@@ -1,0 +1,98 @@
+.calendarWrapper 
+{
+border: silver 2px solid;
+width: 525px;
+margin: 0 auto;
+
+}
+
+.calendarTitle 
+{
+text-align: center;
+padding: 5px;
+font-weight: 700;
+grid-column: span 7;
+border: blue 1px solid;
+color: blue;
+
+}
+
+
+.calendar
+{
+display: grid;
+grid-template-columns: 75px 75px 75px 75px 75px 75px 75px;
+}
+
+.calendarCell, .days
+{
+border: blue 1px solid;
+text-align: center;
+padding: 3px;
+color: blue;
+}
+
+.blankDay 
+{
+border: blue 1px solid;
+text-align: center;
+padding: 3px;
+background-color: silver;
+}
+
+#select 
+{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 5px;
+}
+
+#sunday
+{
+font-size: 14px;
+margin-left: 15px;
+font-weight: bold;
+}
+
+#monday
+{
+font-size: 14px;
+margin-left: 25px;
+font-weight: bold;
+}
+
+#tuesday
+{
+font-size: 14px;
+margin-left: 22px;
+font-weight: bold;
+}
+
+#wednesday
+{
+font-size: 14px;
+margin-left: 10px;
+font-weight: bold;
+}
+
+#thursday
+{
+font-size: 14px;
+margin-left: 8px;
+font-weight: bold;
+}
+
+#friday
+{
+font-size: 14px;
+margin-left: 18px;
+font-weight: bold;
+}
+
+#saturday
+{
+font-size: 14px;
+margin-left: 25px;
+font-weight: bold;
+}
