@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='starwars.css'>
+    </head>
+
+
+
+
+    <body>
+        <h1 style='text-align:center;' id='title'>Star Wars Data Checker</h1>
+
+        <div class='queryWrapper'>
+            <div class="query" >Query Type:</div>
+            <div>
+                <select id='queryType'> <!--"queryType = query selector"-->
+                    <option value='people'>People</option>
+                    <option value='planets'>Planets</option>
+                    <option value='starships'>Starships</option>
+                </select>
+            </div>
+
+
+
+            <div class="item">Item Number:</div>
+            <div>
+                <input type="number" style='width:35px' id='itemID' /> <!--"itemID = query selector"-->
+            </div>
+            <div>
+                <button id='fetchButton' onclick="fetchData()">Fetch Data</button> 
+                <!--"fetchButton = query selector"-->
+            </div>
+        </div>
+
+
+
+
+        <br /><br />
+
+        <div id='ResponseData' class='dataWrapper'>   <!--"itemID = query selector"-->
+            <div class='dataCellLabel' id='dataLabel1'></div> <!--"dataLabel1 = query selector"-->
+            <div class='dataCell' id='dataValue1'></div>  <!--"dataValue1 = query selector"-->
+            <div class='dataCellLabel' id='dataLabel2'></div> <!--"dataLabel2 = query selector"-->
+            <div class='dataCell' id='dataValue2'></div> <!--"dataValue2 = query selector"-->
+        </div>
+
+        <br /><br />
+
+
+        
+        <div class='footer'>
+            <hr />
+            <a href='https://swapi.dev/api/'' target='_new'>Data courtesy of Star War API</a>
+        </div>
+
+        <p id="signature"> </p>
+
+
+        <script src='starwars.js'></script>
+    </body>
+</html>
